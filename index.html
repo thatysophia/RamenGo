@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RamenGo</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="images/RamenGo_3.png" alt="Logo RamenGo" />
+        </div>
+        <div class="circle"></div>
+        <!-- Círculo central -->
+        <div class="circle-container">
+          <img
+            src="images/entregadora.png"
+            alt="Descrição da Imagem"
+            class="overlay-image"
+          />
+          <div class="red-circle"></div>
+          <img
+            src="images/balao-amarelo.png"
+            alt="Balão Amarelo"
+            class="balloon-image"
+          />
+          <img
+            src="images/balao-azul.png"
+            alt="Balão Azul"
+            class="balloonblue-image"
+          />
+          <img src="images/go.png" alt="go" class="go-image" />
+        </div>
+      </nav>
+    </header>
+    <div class="container-titulos">
+      <h2 class="titulo-secao">
+        First things first: select your favorite broth.
+      </h2>
+      <p class="subtitulo">It will give the whole flavor on your ramen soup.</p>
+    </div>
+    <div id="brothGallery" class="broth-gallery"></div>
+    <div class="container-titulos">
+      <h2 class="titulo-secao">It's time to choose (or not) your meat!</h2>
+      <p class="subtitulo">
+        Some people love, some don't. We have options for all tastes.
+      </p>
+    </div>
+    <div id="proteinImages" class="protein-gallery"></div>
+    <div class="order-button-container">
+      <img
+        src="images/PlaceMyOrder.png"
+        alt="Place My Order"
+        id="placeOrderButton"
+        style="cursor: pointer"
+        onclick="submitOrder()"
+      />
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

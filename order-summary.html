@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resumo do Pedido</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h2>Seu pedido está confirmado!</h2>
+    <p>ID do Pedido: <span id="orderId"></span></p>
+    <div>Detalhes do Caldo: <span id="brothDetails"></span></div>
+    <div>Detalhes da Proteína: <span id="proteinDetails"></span></div>
+    <div id="totalPrice">Total do Pedido:</div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const orderDetails = JSON.parse(localStorage.getItem("orderDetails"));
+        if (orderDetails) {
+          console.log("Order Details:", orderDetails);
+
+          document.getElementById("orderId").textContent = orderDetails.orderId;
+          document.getElementById(
+            "brothDetails"
+          ).textContent = `${orderDetails.broth.name}`;
+          document.getElementById(
+            "proteinDetails"
+          ).textContent = `${orderDetails.protein.name}`;
+
+          const brothPrice = parseFloat(orderDetails.broth.price);
+          const proteinPrice = parseFloat(orderDetails.protein.price);
+
+          console.log("Broth Price:", brothPrice);
+          console.log("Protein Price:", proteinPrice);
+
+          if (!isNaN(brothPrice) && !isNaN(proteinPrice)) {
+            const total = brothPrice + proteinPrice;
+            document.getElementById("totalPrice").textContent =
+              "Valor total do Pedido: $" + total.toFixed(2);
+            console.log("Total Price:", total);
+          } else {
+            document.getElementById("totalPrice").textContent =
+              "Erro ao calcular o total";
+            console.log(
+              "Erro ao calcular total, valores inválidos:",
+              brothPrice,
+              proteinPrice
+            );
+          }
+        } else {
+          document.getElementById("summary").textContent =
+            "Nenhum pedido encontrado.";
+          console.log("Nenhum detalhe de pedido encontrado no localStorage");
+        }
+      });
+    </script>
+  </body>
+</html>

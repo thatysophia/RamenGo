@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 768px; 
+    background-image: url('../images/pattern-red.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;  
+  }
+  
+  .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 668px;
+    height: 650px;
+    background-color: #680c0c;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.circle-container {
+    position: relative;
+    width: 100%;
+    height: 768px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.red-circle {
+    background-color: #680c0c;
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+}
+
+.overlay-image {
+    position: absolute;
+    z-index: 15;
+    width: 720px; 
+    height: auto; 
+    transform: translate(-50%, -50%); 
+    top: 51%; 
+    left: 724px; 
+}
+
+.balloon-image {
+    position: absolute;
+    width: 100px;  
+    height: auto;  
+    z-index: 20; 
+    left: 61%;  
+    top: 53%;  
+    transform: translateY(-50%); 
+}
+
+.balloonblue-image{
+    position: absolute;
+    width: 100px;  
+    height: auto; 
+    z-index: 20;  
+    left: 21%;  
+    top: 18%;  
+    transform: translateY(-50%); 
+}
+
+.go-image{
+    position: absolute;
+    width: 550px; 
+    height: 550px;  
+    z-index: 20;  
+    left: 3%;  
+    top: 45%;
+    transform: translateY(-50%);  
+}
+
+nav .menu {
+    flex: 1;  
+  }
+
+nav .logo {
+    flex-grow: 1; 
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+nav .logo img {
+    height: 200px; 
+    width: auto; 
+    margin-left: 5px; 
+    margin-bottom: 600px;
+}
+
+nav .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px; 
+    font-size: 16px; 
+}
+
+nav .menu a:hover {
+    color: #fcbf49; 
+}
+
+select {
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #d62828;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: -450px;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 4px;
+    display: none; 
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav .menu a {
+    text-decoration: none;
+    color: white;
+    margin-left: 90px;
+    font-size: 16px;
+}
+
+nav .menu a:hover {
+    color: #fcbf49; 
+}
+.monteSeuRamen{
+    width: 500px;
+}
+.carousel {
+    width: 90%; 
+    max-width: 1000px; 
+    margin: 20px auto; 
+    overflow: hidden; 
+    position: relative; 
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%;
+}
+
+.slide {
+    width: 25%; 
+    flex-shrink: 0; 
+    display: block;
+}
+
+.slide img {
+    width: 100%; 
+    height: auto; 
+}
+.prev, .next {
+    background-color: #004c36;
+    color: white;
+    font-size: 24px; 
+    padding: 10px 15px; 
+}
+.content {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    max-height: 100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 150px;
+    background-color: white;
+    
+}
+h1 {
+    text-align: center;
+    color: #d62828;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+}
+
+h2 {
+    color: #d62828;
+    font-size: 24px;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Rounded Mplus 1c', sans-serif;
+
+}
+
+.broth-card.selected, .protein-card.selected {
+    border: 2px solid #d62828;
+    box-shadow: 0 0 10px rgba(214, 40, 40, 0.5);
+  }
+  
+.broth-gallery, .protein-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;  
+    gap: 20px;  
+    padding: 20px 0;
+}
+
+.protein-card, .broth-card {
+    width: 320px; 
+    height: 316px; 
+    border: 1px solid #ccc;
+    padding: 5px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    margin: 10px; 
+}
+
+.protein-image, .broth-image {
+    max-width: 100%;
+    height: auto; 
+    border-radius: 4px;
+}
+
+.protein-title, .broth-title {
+    font-size: 18px;
+    color: #333;
+    margin: 2px 0; 
+    font-family: 'Rounded Mplus 1c', sans-serif;
+
+}
+
+.protein-description, .broth-description {
+    font-size: 14px;
+    color: #666;
+    text-align: center; 
+    margin: 2px 0; 
+    font-family: 'Rounded Mplus 1c', sans-serif;
+
+}
+
+.protein-price, .broth-price {
+    font-size: 16px;
+    color: #d62828;
+    font-weight: bold;
+    font-family: 'Rounded Mplus 1c', sans-serif;
+    margin-bottom: 2px; 
+}
+
+.titulo-secao, .subtitulo {
+    text-align: center; 
+    color: black;
+    font-family: 'Rounded Mplus 1c', sans-serif;
+}
+
+  .titulo-secao {
+    margin-bottom: 5px; 
+    color: black; 
+    text-align: left;
+    font-family: Rounded Mplus 1c;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 47.52px;
+   
+}
+
+.subtitulo {
+    color: black;
+    font-size: 16px; 
+    margin-bottom: 20px; 
+    text-align: left; 
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 47.52px;
+    text-align: left;
+    font-style: normal;
+}
+.container-titulos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.order-button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 5vw; 
+    margin-top: 2vw; 
+}
+
+#placeOrderButton {
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
